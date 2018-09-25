@@ -3,15 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.boblyn.pressentercontinue;
+package com.lyn0801.pressentercontinue;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- *
- * @author marstor
+ * Console press Enter button to continue displaying output information.
+ * @author lyn0801
  */
 public class EnterTest {
     public static BufferedReader bfr = null;

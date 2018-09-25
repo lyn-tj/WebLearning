@@ -1,4 +1,4 @@
 # WebLearning java's catalog:
-#### 控制台按Enter键继续显示输出信息
+#### Console press Enter button to continue displaying output information.
 #### 
 # WebLearning javascript's catalog:
