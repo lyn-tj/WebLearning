@@ -10,5 +10,6 @@
     <packaging>pom</packaging>
     <modules>
         <module>PressEnterContinue</module>
+        <module>UpperLowerCaseSort</module>
     </modules>
 </project>
