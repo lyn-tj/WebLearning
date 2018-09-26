@@ -7,8 +7,8 @@
     <packaging>pom</packaging>
     <modules>
         <module>java</module>
-        <module>javascript</module>
         <module>springboot</module>
+        <module>css-html-jsp-javascript</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
