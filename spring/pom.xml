@@ -6,10 +6,8 @@
         <artifactId>WebLearning</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <artifactId>springboot</artifactId>
+    <groupId>com.lyn0801</groupId>
+    <artifactId>spring</artifactId>
     <packaging>pom</packaging>
-    <modules>
-        <module>SpringBootRestful</module>
-        <module>SpringBootELK</module>
-    </modules>
+  <modules></modules>
 </project>

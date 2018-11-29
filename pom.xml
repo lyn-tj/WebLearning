@@ -9,6 +9,7 @@
         <module>java</module>
         <module>springboot</module>
         <module>css-html-jsp-javascript</module>
+        <module>spring</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
