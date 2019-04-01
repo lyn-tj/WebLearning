@@ -11,5 +11,6 @@
     <modules>
         <module>PressEnterContinue</module>
         <module>UpperLowerCaseSort</module>
+        <module>JavaIO</module>
     </modules>
 </project>

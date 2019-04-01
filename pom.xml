@@ -10,6 +10,8 @@
         <module>springboot</module>
         <module>css-html-jsp-javascript</module>
         <module>spring</module>
+        <module>java/LocalMachineIpAddress</module>
+        <module>java/FileReadAndWrite</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

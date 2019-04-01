@@ -10,6 +10,9 @@
     <packaging>pom</packaging>
     <modules>
         <module>SpringBootRestful</module>
+        <module>SpringBootMybatis</module>
         <module>SpringBootELK</module>
+        <module>SpringBootSwagger2</module>
+        <module>SpringBootThreadPool</module>
     </modules>
 </project>
