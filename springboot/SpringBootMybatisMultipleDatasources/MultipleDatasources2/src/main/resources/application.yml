@@ -1,0 +1,15 @@
+server:
+  port: 8080
+spring:
+  datasource:
+    hikari:
+      test01:
+        jdbc-url: jdbc:mysql://localhost:3306/test01?useUnicode=true&characterEncoding=UTF-8
+        username: root
+        password: root
+        driver-class-name: com.mysql.jdbc.Driver
+      test02:
+        jdbc-url: jdbc:mysql://localhost:3306/test02?useUnicode=true&characterEncoding=UTF-8
+        username: root
+        password: root
+        driver-class-name: com.mysql.jdbc.Driver

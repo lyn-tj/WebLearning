@@ -10,7 +10,7 @@ public class MybatisLogger {
     private static MybatisLogger mybatisLogger = null;
     private static Logger logger = null;
     private static LoggerContext context = null;
-    private static String PATH = "E:/test/log4jCfg.xml";
+    private static String PATH = "static/log4jCfg.xml";
 
     public static MybatisLogger getInstance(){
         if(mybatisLogger == null){

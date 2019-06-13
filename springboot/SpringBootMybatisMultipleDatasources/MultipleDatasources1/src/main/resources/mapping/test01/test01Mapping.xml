@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.lyn0801.mapper.test01.test01Mapping">
+    <insert id="addUser" parameterType="com.lyn0801.bean.User">
+        INSERT INTO user VALUES(#{id}, #{name}, #{password})
+    </insert>
+</mapper>

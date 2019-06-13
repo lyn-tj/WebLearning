@@ -1,10 +1,7 @@
 package com.lyn0801.controller;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.lyn0801.entity.DeviceResponse;
 import com.lyn0801.entity.UserResponse;
 import com.lyn0801.service.UserService;
-import com.lyn0801.util.JsonUtil;
 import com.lyn0801.util.MybatisLogger;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,15 +18,15 @@ import java.util.List;
 
 @RestController
 public class UserController {
-    private static Logger logger = MybatisLogger.getLogger("SpringBootMybatis");
+//    private static Logger logger = MybatisLogger.getLogger("SpringBootMybatis");
     @Autowired
     private UserService userService;
     private static RestTemplate restTemplate;
     static {
         restTemplate = new RestTemplate();
-        List<HttpMessageConverter<?>> messageConverters = restTemplate.getMessageConverters();
-        messageConverters.remove(6);
-        messageConverters.add(6, new GsonHttpMessageConverter());
+//        List<HttpMessageConverter<?>> messageConverters = restTemplate.getMessageConverters();
+//        messageConverters.remove(6);
+//        messageConverters.add(6, new GsonHttpMessageConverter());
 //        messageConverters.add(new GsonHttpMessageConverter());
     }
 
@@ -50,7 +47,7 @@ public class UserController {
     public UserResponse getAllUsersByClient(){
         ResponseEntity<UserResponse> responseEntity = restTemplate.getForEntity("http://localhost:8080/getAllUsers", UserResponse.class);
         UserResponse responseList = responseEntity.getBody();
-        logger.debug("获取用户列表["+ responseList.getCode() + " : " +responseList.getMessage_CN()+"]");
+//        logger.debug("获取用户列表["+ responseList.getCode() + " : " +responseList.getMessage_CN()+"]");
         return responseEntity.getBody();
     }
 }

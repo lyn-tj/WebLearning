@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="OFF" monitorInterval="1800">
+    <appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="[%logger{36}] %d{yyyy-MM-dd HH:mm:ss} %-5level - %msg%n"/>
+        </Console>
+        <RollingFile name="RollingFile" fileName="E:/test/surveillance.log"
+                     filePattern="E:/test/$${date:yyyy-MM}/surveillance-%d{MM-dd-yyyy}-%i.log.gz">
+            <PatternLayout pattern="[%logger{36}] %d{yyyy-MM-dd HH:mm:ss} %-5level - %msg%n"/>
+            <Policies>
+                <SizeBasedTriggeringPolicy size="500 MB"/>
+            </Policies>
+            <DefaultRolloverStrategy fileIndex="max" max="10"/>
+        </RollingFile>
+    </appenders>
+
+    <loggers>
+        <root level="debug">
+            <appender-ref ref="Console"/>
+            <appender-ref ref="RollingFile"/>
+        </root>
+    </loggers>
+</configuration>
