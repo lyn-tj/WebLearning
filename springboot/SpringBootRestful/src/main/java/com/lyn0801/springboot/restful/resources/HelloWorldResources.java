@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author lyn0801
  */
 @RestController
+@RequestMapping("hello")
 public class HelloWorldResources {
     @Value ("${server.port}")
     String port;
