@@ -1,0 +1,20 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        jdbc:
+          sql: SELECT key, value FROM properties WHERE application = ? AND profile = ? AND lable = ?
+      label: master
+    refresh:
+      enabled: true
+  profiles:
+    active: jdbc
+  datasource:
+    url: jdbc:postgresql://127.0.0.1:41000/marstor
+    username: msa
+    password: msa
+    driver-class-name: org.postgresql.Driver
