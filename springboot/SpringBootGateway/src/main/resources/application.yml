@@ -1,0 +1,26 @@
+server:
+  port: 8080
+logging:
+  level:
+    org.springframework.cloud.gateway: TRACE
+    org.springframework.http.server.reactive: DEBUG
+    org.springframework.web.reactive: DEBUG
+    reactor.ipc.netty: DEBUG
+spring:
+  application:
+    name: springboot-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+#      routes:
+#        - id: client_route
+#          uri: lb://eureka-client
+#          predicates:
+#            - Path=/hello/**
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:51001/eureka
