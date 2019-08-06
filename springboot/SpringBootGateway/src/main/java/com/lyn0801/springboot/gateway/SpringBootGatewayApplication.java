@@ -12,13 +12,18 @@ public class SpringBootGatewayApplication {
         SpringApplication.run(SpringBootGatewayApplication.class, args);
     }
 
-    @Bean
-    public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
-        return builder.routes()
-                // basic proxy
-                .route("client_route", r -> r.path("/hello/**").and()
-                        .header("X-Marstor-Token", "c9494352f924f36974ebb48261570ec7")
-                        .uri("lb://eureka-client"))
-                .build();
-    }
+//    @Bean
+//    public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
+//        return builder.routes()
+//                // basic proxy
+//                .route("eureka-client-v1", r -> r.path("/hello1/**")
+////                        .and().header("X-Marstor-Token", "c9494352f924f36974ebb48261570ec7")
+//                        .filters(f -> f.prefixPath("/v1"))
+//                        .uri("lb://eureka-client"))
+//                .route("eureka-client-v2", r -> r.path("/hello2/**")
+////                        .and().header("X-Marstor-Token", "c9494352f924f36974ebb48261570ec7")
+//                        .filters(f -> f.prefixPath("/v2"))
+//                        .uri("lb://eureka-client"))
+//                .build();
+//    }
 }
