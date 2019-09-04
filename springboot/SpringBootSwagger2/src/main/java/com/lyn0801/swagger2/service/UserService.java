@@ -6,7 +6,7 @@
 package com.lyn0801.swagger2.service;
 
 
-import com.lyn0801.swagger2.model.User;
+import com.lyn0801.swagger2.model.UserInfo;
 
 import java.util.List;
 
@@ -15,9 +15,9 @@ import java.util.List;
  * @author lyn0801
  */
 public interface UserService {
-    User getUserById(int id);
-    boolean addUser(User user);
-    boolean modifyUser(User user);
+    UserInfo getUserById(int id);
+    boolean addUser(UserInfo user);
+    boolean modifyUser(UserInfo user);
     boolean deleteUserById(int id);
-    List<User> getAllUsers();
+    List<UserInfo> getAllUsers();
 }

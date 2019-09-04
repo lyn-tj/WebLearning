@@ -9,7 +9,7 @@ package com.lyn0801.swagger2.model;
  *
  * @author lyn0801
  */
-public class User {
+public class UserInfo {
     private int id;
     private String name;
     private int age;
@@ -17,9 +17,9 @@ public class User {
     @Override
     public boolean equals(Object obj) {
         if (null == obj) return false;
-        if(obj instanceof User){
-            User user = (User) obj;
-            if(user.getId() == this.id){
+        if(obj instanceof UserInfo){
+            UserInfo userInfo = (UserInfo) obj;
+            if(userInfo.getId() == this.id){
                 return true;
             }
         }

@@ -5,7 +5,7 @@
  */
 package com.lyn0801.swagger2.service.impl;
 
-import com.lyn0801.swagger2.model.User;
+import com.lyn0801.swagger2.model.UserInfo;
 import com.lyn0801.swagger2.service.UserService;
 import org.springframework.stereotype.Service;
 
@@ -19,27 +19,27 @@ import java.util.List;
 @Service
 public class UserServiceImpl implements UserService {
 
-    private List<User> userList = new ArrayList<User>();
+    private List<UserInfo> userList = new ArrayList<UserInfo>();
 
     public UserServiceImpl() {
-        User user = new User();
+        UserInfo user = new UserInfo();
         user.setId(1);
         user.setName("张三");
         userList.add(user);
-        user = new User();
+        user = new UserInfo();
         user.setId(2);
         user.setName("李四");
         userList.add(user);
-        user = new User();
+        user = new UserInfo();
         user.setId(3);
         user.setName("王五");
         userList.add(user);
     }
 
     @Override
-    public User getUserById(int id) {
-        User userResult = null;
-        for (User userTemp : userList) {
+    public UserInfo getUserById(int id) {
+        UserInfo userResult = null;
+        for (UserInfo userTemp : userList) {
             if (userTemp.getId() == id) {
                 userResult = userTemp;
             }
@@ -48,11 +48,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public boolean modifyUser(User user) {
+    public boolean modifyUser(UserInfo user) {
         boolean result = true;
-        List<User> userListNew = new ArrayList<User>();
+        List<UserInfo> userListNew = new ArrayList<UserInfo>();
         try {
-            for (User userTemp : userList) {
+            for (UserInfo userTemp : userList) {
                 if (user.getId() == userTemp.getId()) {
                     userListNew.add(user);
                 } else {
@@ -70,7 +70,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public boolean addUser(User user) {
+    public boolean addUser(UserInfo user) {
         boolean result = true;
         try {
             if (null != userList && !userList.contains(user)) {
@@ -85,9 +85,9 @@ public class UserServiceImpl implements UserService {
     @Override
     public boolean deleteUserById(int id) {
         boolean result = true;
-        List<User> userListNew = new ArrayList<User>();
+        List<UserInfo> userListNew = new ArrayList<UserInfo>();
         try {
-            for (User userTemp : userList) {
+            for (UserInfo userTemp : userList) {
                 if (id == userTemp.getId()) {
 
                 } else {
@@ -105,7 +105,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<User> getAllUsers() {
+    public List<UserInfo> getAllUsers() {
         return userList;
     }
 
