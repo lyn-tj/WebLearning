@@ -1,5 +1,11 @@
 server:
   port: 8080
+  address: 127.0.0.1
+  ssl:
+    keyStore: classpath:client.p12
+    keyStorePassword: 123456
+    keyStoreType: PKCS12
+    keyAlias: client
 logging:
   level:
     org.springframework.cloud.gateway: TRACE
@@ -17,19 +23,19 @@ spring:
         locator:
           enabled: true
           lower-case-service-id: true
-      routes:
-        - id: eureka-client-v1
-          uri: lb://eureka-client
-          predicates:
-            - Path=/hello1/**
-          filters:
-            - PrefixPath=/v1
-        - id: eureka-client-v2
-          uri: lb://eureka-client
-          predicates:
-            - Path=/hello2/**
-          filters:
-            - PrefixPath=/v2
+#      routes:
+#        - id: eureka-client-v1
+#          uri: lb://eureka-client
+#          predicates:
+#            - Path=/hello1/**
+#          filters:
+#            - PrefixPath=/v1
+#        - id: eureka-client-v2
+#          uri: lb://eureka-client
+#          predicates:
+#            - Path=/hello2/**
+#          filters:
+#            - PrefixPath=/v2
 eureka:
   client:
     service-url:

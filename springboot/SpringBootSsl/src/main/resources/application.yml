@@ -1,0 +1,7 @@
+server:
+  port: 8080
+  ssl:
+    key-store: classpath:server.jks
+    key-store-password: 123456
+    key-store-type: JKS
+    key-alias: server

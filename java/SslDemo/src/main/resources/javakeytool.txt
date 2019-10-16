@@ -1,0 +1,5 @@
+keytool -genkey -alias server -keypass 123456 -dname "CN=lyn,OU=lyn,O=lyn,L=BeiJing,ST=BeiJing,C=ZH" -keyalg RSA -keysize 1024 -validity 365 -storepass 123456 -keystore server.jks
+keytool -genkey -alias client -keypass 123456 -dname "CN=lyn,OU=lyn,O=lyn,L=BeiJing,ST=BeiJing,C=ZH" -keyalg RSA -keysize 1024 -validity 365 -storepass 123456 -keystore client.jks
+keytool -export -alias server -keystore server.jks -storepass 123456 -file server.cer
+keytool -import -trustcacerts -alias server -storepass 123456 -file server.cer -keystore client.jks
+keytool -list -v -keystore client.jks
